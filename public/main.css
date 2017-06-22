@@ -1,0 +1,46 @@
+body {
+  background-color: grey;
+  font-family: 'PT Sans';
+}
+input
+{
+  width: 23vw;
+  height: 3vw;
+  font-size: 1em;
+}
+.errors {
+  display: flex;
+  flex-flow: column;
+}
+button {
+  box-shadow: 0.1vw 0.1vw black;
+  color: black;
+  background: white;
+  max-width: 20vw;
+  margin: 1vw;
+  padding: 0.25vw;
+  font-size: 0.75em;
+}
+label {
+  margin-top: 1vw;
+}
+
+.container {
+  width: 50%;
+  border: 2px dotted black;
+  padding: 4vw;
+
+}
+
+ul {
+  display: flex;
+  flex-flow: column;
+  min-width: 50vw;
+  padding: 1vw;
+  list-style: none;
+}
+
+li {
+  padding: 0.25vw;
+  text-decoration: none;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Express Forms</title>
+    <link rel="stylesheet" href="./main.css">
+  </head>
+  <body>
+    <div class="container">
+
+        <div class="cls_input">
+          <form action="/" method="post">
+          <input type="text" name="todo" value="" placeholder="Add a todo">
+          <button type="submit">Add todo</button>
+          <input type="hidden" name="action" value="todo">
+          </form>
+        </div>
+
+
+        <div class="cls_list">
+          <ul>
+            <li>
+              {{#list}}
+              <form action="/" method="post">
+                <button type="submit" name="btnComplete">Mark as complete</button>
+                <span id="{{id}}">{{item}}</span>
+                <input type = "hidden" name="id_btn" value={{id}}>
+                <input type="hidden" name="action" value="complete">
+            </form>
+            {{/list}}
+            </li>
+        </div>
+
+
+        <div class="cls_complete">
+            <p><b>Completed Tasks</b></p><hr>
+            <ul>
+              {{#list}}{{#marked}} <li>{{item}}</li> {{/marked}}{{/list}}
+            </ul>
+            <p><b>Incomplete Tasks</b></p><hr>
+            <ul>
+              {{#list}}{{^marked}} <li>{{item}}</li> {{/marked}}{{/list}}
+            </ul>
+        </div>
+
+    </div>
+  </body>
+</html>
